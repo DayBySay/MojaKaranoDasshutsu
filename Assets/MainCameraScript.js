@@ -8,4 +8,11 @@ function Update () {
 	} else if (axis == -1) {
 		transform.eulerAngles.y -= 90.0;
 	}
+	
+	 Debug.Log(Input.touchCount);
+	if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved) {
+ 		Debug.Log(" hurikku ");
+		transform.eulerAngles.y += 90.0;
+ 	}
+
 }
